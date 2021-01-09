@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta name="viewport" content="width=device-width"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5ef07a0108ecd500128efc3c&amp;product=inline-share-buttons" async></script> 
+ <style>
+body{background-color:purple;}
+#searchbar{border-radius:12px;
+           padding:10px;
+           width:75%;
+           margin-left:38px;
+           box-shadow:0px 0px 60px white;
+           border:none;
+           background-color:#f2f2f2;}
+#searchicon{font-size:25px;
+            padding:7px;
+            top:7px;
+            margin-right:0px;
+            color:grey;
+            border-radius:4px;
+            border:none;
+            background-color:white;
+            box-shadow:0px 0px 60px white;}
+svg{margin-top:10px;
+    height:300px;
+    width:device-width;
+    margin-left:8%;
+}
+#forward , #backward , #voloff , #volup{border-radius:50%;
+       margin-left:35px;
+       border-style:none;
+       padding:15px;
+       box-shadow:0px 0px 60px white;}
+.dropbtn , #dropbtn{font-size:25px;
+            padding:4px;
+            top:7px;
+            color:grey;
+            border-radius:4px;
+            border:none;
+            background-color:white;
+            box-shadow:0px 0px 60px white;
+            display:absolute;}
+audio{padding-top:4px;
+      padding-down:4px;
+      width:100%;
+      border:none;
+      box-shadow:0px 0px 60px white; 
+      background-color:none;}
+.dropdown{display:inline-block;
+          position:absolute;}
+.dropdown-content{display:none;
+                  position:relative;}
+.dropdown-content a{color:grey;
+                    text-decoration:none;
+                     display:block;
+                     padding:6px 30px;
+                     border-radius:1px;
+                     box-shadow:0px 1px 1px black;
+                     text-align:center;}
+  .dropdown:hover .dropdown-content{display:block;
+                    background-color:white;
+                    font-size:16px;
+                    width:100%;
+                    box-shadow:0 0 20px white;}
+ .dropdown-content a:hover{color:white;
+                           background-color:grey;
+ }
+ p{text-align:center;
+ }
+ marquee{direction:right;
+         font-size:16px;
+         height:20px;
+         width:80%;
+         margin-left:10%;
+         background-color:white;
+         box-shadow:0px 0px 60px white;
+         border-radius:12px;
+         positon:fixed;
+         color:grey;
+ }
+ #shareicon{display:relative;}
+</style></head> 
+ <body> 
+  <div class="audio-player"> 
+   <div class="dropdown"> 
+    <button class="dropbtn"><span class="glyphicon glyphicon-tasks" id="tasks"></span></button> 
+    <div class="dropdown-content"> 
+     <a href="#">Set ringtone</a> 
+     <a href="#"> 
+      <div class="sharethis-inline-share-buttons" id="shareicons"></div></a> 
+     <a href="#">Download</a> 
+     <a href="#">Subscribe</a> 
+     <p>Color pallete<span class="glyphicon glyphicon-chevron-down" id="dropbtn"></span></p> 
+     <div class="dropdown-content" id="ddc1"> 
+      <a href="#" id="default" onclick="Default()">Default</a> 
+      <a href="#" id="blue" onclick="Blue()">Blue</a> 
+      <a href="#" id="orange" onclick="Orange()">Orange</a> 
+      <a href="#" id="green" onclick="Green()">Green</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="container" id="search"> 
+    <input type="text,number" id="searchbar" placeholder="Search album...."> 
+    <button class="glyphicon glyphicon-search" id="searchicon"></button> 
+   </div> 
+   <div> 
+    <svg> 
+     <circle cx="50%" cy="50%" r="120" stroke="white" stroke-width="4px" fill="music.gif" id="audiolen" /> 
+    </svg> 
+   </div> 
+   <div> 
+    <marquee>
+      Done by lk 
+    </marquee> 
+    <br> 
+   </div> 
+   <div> 
+    <button class="glyphicon glyphicon-backward" id="backward"></button> 
+    <button class="glyphicon glyphicon-forward" id="forward"></button> 
+    <button class="glyphicon glyphicon-volume-off" id="voloff"></button> 
+    <button class="glyphicon glyphicon-volume-up" id="volup"></button> 
+    <br> 
+    <audio controls></audio> 
+<script>
+function Default()
+{document.body.style.backgroundColor="purple";
+};
+function Blue()
+{document.body.style.backgroundColor="blue";
+};
+function Orange()
+{document.body.style.backgroundColor="orange";
+ 
+};
+function Green()
+{document.body.style.backgroundColor="green";
+};
+function Stroke()
+{
+  document.getElementById("audiocover").stroke.style.Color="green";
+}
+</script>
+   </div> 
+  </div> 
+ </body>
+</html>
